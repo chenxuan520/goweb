@@ -6,13 +6,19 @@ import (
 	"log"
 )
 
+type StaticPath struct {
+	RelativePath string `json:"relative_path"`
+	RootPath     string `json:"root_path"`
+}
+
 type Server struct {
-	Port     int    `json:"port"`
-	Password string `json:"password"`
+	Port int    `json:"port"`
+	Host string `json:"host"`
 }
 
 type Config struct {
-	Server Server `json:"server"`
+	Server      Server       `json:"server"`
+	StaticPaths []StaticPath `json:"static_paths"`
 }
 
 var (
