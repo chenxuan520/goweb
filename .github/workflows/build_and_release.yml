@@ -4,6 +4,8 @@ on:
     branches:
       - main
       - master
+    tags:
+      - 'v*'
 
 jobs:
   build:
