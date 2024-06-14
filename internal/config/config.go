@@ -7,8 +7,8 @@ import (
 )
 
 type StaticPath struct {
-	RelativePath string `json:"relative_path"`
-	RootPath     string `json:"root_path"`
+	FilePath string `json:"file_path"`
+	WebPath  string `json:"web_path"`
 }
 
 type Server struct {

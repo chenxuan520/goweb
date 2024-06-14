@@ -5,8 +5,8 @@
   },
   "static_paths": [
     {
-      "request_path": ".",
-      "root_path": "/"
+      "file_path": ".",
+      "web_path": "/"
     }
   ]
 }

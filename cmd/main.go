@@ -11,7 +11,7 @@ func main() {
 	config.Init()
 	g := gin.Default()
 	for _, staticPath := range config.GlobalConfig.StaticPaths {
-		g.Static(staticPath.RelativePath, staticPath.RootPath)
+		g.Static(staticPath.WebPath, staticPath.FilePath)
 	}
 	g.Run(config.GlobalConfig.Server.Host + ":" + fmt.Sprintf("%d", config.GlobalConfig.Server.Port))
 }
